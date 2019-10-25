@@ -42,4 +42,4 @@ encrypteventError = {
 '''
 }
 
-print(lambda_handler(encrypteventError, None))
+print(lambda_handler(decryptevent, None))

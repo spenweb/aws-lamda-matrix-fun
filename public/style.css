@@ -1,0 +1,85 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+main {
+    min-width: 600px;
+    width: 33%;
+    padding: 20px;
+    background-color: #e8e8e8;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px #80808030;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -33%);
+}
+
+h1.title {
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+p.tag-line {
+    margin-top: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.fancy-label-holder{
+    padding: 8px;
+    margin-right: 8px;
+    border: 2px solid #a2a2ff;
+    display: inline;
+    border-radius: 8px;
+    position: relative;
+}
+
+.fancy-label {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    top: -9px;
+    background-color: #e8e8e8;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 5px;
+}
+
+input[type="text"]:focus {
+    outline-width: 0;
+}
+
+.fancy-input, .not-so-fancy-input {
+    background-color: transparent;
+    padding: 8px;
+    border: none;
+    cursor: auto;
+    outline: none;
+}
+
+.results {
+    padding: 1rem;
+    color: white;
+    background-color: #6441a3;
+    border-radius: 8px;
+}
+
+form {
+    margin-top: 1.5rem;
+}
+
+.flex-row {
+    display: flex;
+    margin: 0 1em 1em;
+    justify-content: center;
+}
+
+.fancy-button {
+    margin-right: 8px;
+}

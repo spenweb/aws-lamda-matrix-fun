@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Matrix Fun</title>
+    <meta name="description" content="Experiment with different matrices to encrypt and decrypt messages." />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135370162-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135370162-3');
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<main>
+<h1 class="title">Experiment with Matrices & Encryption</h1>
+<section>
+    <p class="tag-line">Create a matrix and see how effective it can both encrypt and decrypt messages.</p>
+    <p>
+        This tool allows viewers to better understand how matrices can be used for encryption as well as brush
+        up on their linear algebra skills. Have fun testing and don't worry about breaking anything!
+    </p>
+    <form method="GET" action="">
+        <div class="flex-row">
+            <div class="fancy-label-holder">
+                <label class="fancy-label" style="display: none;">Rows</label>
+                <input class="fancy-input" id="input-rows" type="text" name="rows" placeholder="# of rows" autofocus required/>
+            </div>
+            <div class="fancy-label-holder">
+                <label class="fancy-label" style="display: none;">Columns</label>
+                <input class="fancy-input" id="input-columns" type="text" name="columns" placeholder="# of columns" required/>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="fancy-label-holder">
+                <label class="fancy-label">*Matrix</label>
+                <textarea class="fancy-input" id="input-matrix" rows=5 cols=20 required>
+1 2 3
+2 4 5
+7 3 1
+                </textarea>
+            </div>
+        </div>
+        <div class="flex-row">
+            <small>*Separate columns by a space and columns by a new line.</small>
+        </div>
+        <div class="flex-row">
+            <div class="fancy-label-holder" style="width: 50%;">
+                <label class="fancy-label" style="display: none;">Message</label>
+                <input class="fancy-input" id="input-message" type="text" name="message" placeholder="Message" required/>
+            </div>
+        </div>
+        <div class="flex-row">
+            <fieldset id="operation" class="not-so-fancy-input" value="encrypt">
+                <input type="radio" name="operation" value="encrypt" id="encrypt"/> <label for="encrypt">Encrypt</label>
+                <input type="radio" name="operation" value="decrypt" id="decrypt"/> <label for="decrypt">Decrypt</label>
+            </fieldset>
+        </div>
+        <div class="flex-row">
+            <button type="submit" id="submit" name="submit" class="fancy-button" value="true">Submit</button>
+        </div>
+    </form>
+    <div id="results"></div>
+</section>
+</main>
+</body>
+</html>
